@@ -322,7 +322,7 @@ h2.gold-text,.teda .gold-text{padding-left:.1em;padding-right:.1em}
  <p><span class="en"><b>Shri Snehal &amp; Smt. Hetalben Patel</b> • <b>Meet &amp; Vrunda</b><br>(USA)</span><span class="gj"><b>શ્રી સ્નેહલ અને શ્રીમતી હેતલબેન પટેલ</b> • <b>મીત અને વૃન્દા</b><br>(USA)</span></p>
  <p><span class="en"><b>Smt. Hinaben &amp; Shri Vipulbhai Dave</b><br>(Bharuch)</span><span class="gj"><b>શ્રીમતી હિનાબેન અને શ્રી વિપુલભાઈ દવે</b><br>(ભરૂચ)</span></p>
  <p style="margin-top:12px"><a class="tel" href="tel:+919998973983">+91 99989 73983</a> &nbsp;•&nbsp; <a class="tel" href="tel:+919998973985">+91 99989 73985</a></p></div>
- <div class="actions rv"><button id="btn-bless" class="btn gold">🌸 <span class="en">Shower your blessings</span><span class="gj">આશીર્વાદ વરસાવો</span></button></div>
+ <div class="actions rv"><p class="script rv" style="font-family:'Great Vibes',cursive;font-size:30px;color:#f6d47a;margin:0 0 6px;text-align:center"><span class="en">Please come to our wedding</span><span class="gj">અમારા લગ્નમાં અવશ્ય પધારશો</span></p><p class="family rv" style="margin:0 0 14px;text-align:center"><span class="en">Your presence and blessings will make our celebration complete.</span><span class="gj">આપની ઉપસ્થિતિ અને આશીર્વાદથી અમારો પ્રસંગ દીપી ઉઠશે.</span></p><button id="btn-bless" class="btn gold">🌸 <span class="en">Shower your blessings</span><span class="gj">આશીર્વાદ વરસાવો</span></button></div>
 </section>
 </main>
 <button id="music" aria-label="Play music"><span>♪</span></button>
@@ -495,9 +495,8 @@ const when=Date.parse('2027-01-31T19:30:00+05:30');
 function count(){const d=Math.max(0,when-Date.now());[Math.floor(d/864e5),Math.floor(d/36e5)%24,Math.floor(d/6e4)%60,Math.floor(d/1e3)%60].forEach((v,i)=>{const el=$$('.count b')[i],t=String(v).padStart(2,'0');if(el.textContent!==t){el.textContent=t;el.classList.remove('tick');void el.offsetWidth;el.classList.add('tick')}})}
 if(Date.now()>=when)$('.count').insertAdjacentHTML('afterend','<p class="arrived">'+L('The auspicious moment has arrived','શુભ ઘડી આવી ગઈ છે')+'</p>');
 count();setInterval(count,1000);
-/* ===== blessings ===== */
+/* ===== share & blessings ===== */
 $('#btn-bless').onclick=()=>{petals(90);show(6)};
-
 /* ===== gallery: shows photos/couple-1.jpg ... couple-4.jpg when added ===== */
 $$('.slide').forEach((el,i)=>{const im=new Image();im.onload=()=>{im.alt='Jaivik and Dhruvisha';el.prepend(im);el.classList.add('pic')};im.src=`photos/couple-${i+1}.jpg`});
 
